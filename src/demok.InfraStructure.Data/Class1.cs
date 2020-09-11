@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace domok.InfraStructure.Data
+namespace demok.InfraStructure.Data
 {
     public class Class1
     {

@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Application", "01 - Application", "{84781B74-D7BB-4EE7-AA6A-CB840F70B7B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Domain", "02 - Domain", "{BC96AF71-A4DA-4EE7-ACC7-BF1D6E65D5EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - InfraStructure", "03 - InfraStructure", "{1A39A2A8-DE48-418F-8AB2-86EC0626E16B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Tests", "04 - Tests", "{72CEB7FD-0CE4-40CE-8A21-AEC00120AAEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demok.WorkerService", "src\demok.WorkerService\demok.WorkerService.csproj", "{96281D51-D90D-4A66-BBFB-38E84C393C59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demok.Domain", "src\demok.Domain\demok.Domain.csproj", "{5B0B8E6A-F8AE-4688-AD4A-0BBA358C67AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domok.InfraStructure.Data", "src\domok.InfraStructure.Data\domok.InfraStructure.Data.csproj", "{2F29CBF6-8C8C-4430-A247-40E3646A2508}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demok.InfraStructure.Ioc", "src\demok.InfraStructure.Ioc\demok.InfraStructure.Ioc.csproj", "{87F07333-88FA-4E46-B23F-399CFAE77E23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96281D51-D90D-4A66-BBFB-38E84C393C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96281D51-D90D-4A66-BBFB-38E84C393C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96281D51-D90D-4A66-BBFB-38E84C393C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96281D51-D90D-4A66-BBFB-38E84C393C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0B8E6A-F8AE-4688-AD4A-0BBA358C67AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0B8E6A-F8AE-4688-AD4A-0BBA358C67AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0B8E6A-F8AE-4688-AD4A-0BBA358C67AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0B8E6A-F8AE-4688-AD4A-0BBA358C67AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F29CBF6-8C8C-4430-A247-40E3646A2508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F29CBF6-8C8C-4430-A247-40E3646A2508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F29CBF6-8C8C-4430-A247-40E3646A2508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F29CBF6-8C8C-4430-A247-40E3646A2508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F07333-88FA-4E46-B23F-399CFAE77E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F07333-88FA-4E46-B23F-399CFAE77E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F07333-88FA-4E46-B23F-399CFAE77E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F07333-88FA-4E46-B23F-399CFAE77E23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{96281D51-D90D-4A66-BBFB-38E84C393C59} = {84781B74-D7BB-4EE7-AA6A-CB840F70B7B0}
+		{5B0B8E6A-F8AE-4688-AD4A-0BBA358C67AB} = {BC96AF71-A4DA-4EE7-ACC7-BF1D6E65D5EC}
+		{2F29CBF6-8C8C-4430-A247-40E3646A2508} = {1A39A2A8-DE48-418F-8AB2-86EC0626E16B}
+		{87F07333-88FA-4E46-B23F-399CFAE77E23} = {1A39A2A8-DE48-418F-8AB2-86EC0626E16B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4C75E46-F985-4DD1-8239-62AFE5713C09}
+	EndGlobalSection
+EndGlobal

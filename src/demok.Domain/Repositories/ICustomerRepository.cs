@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace demok.Domain.Dto
+namespace demok.Domain.Repositories
 {
-    class ClassDto
+    public interface ICustomerRepository
     {
     }
 }

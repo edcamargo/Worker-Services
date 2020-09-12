@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace demok.Domain.Entities
+namespace demok.Domain.Shared
 {
-    class ClassEntity
+    class GenericResult
     {
     }
 }

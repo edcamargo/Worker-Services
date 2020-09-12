@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace demok.Domain.Repositories
+namespace demok.InfraStructure.Data.Repositories
 {
-    class ClassRepos
+    public class CustomerRepository
     {
     }
 }

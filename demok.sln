@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - InfraStructure", "03 -
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Tests", "04 - Tests", "{72CEB7FD-0CE4-40CE-8A21-AEC00120AAEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demok.WorkerService", "src\demok.WorkerService\demok.WorkerService.csproj", "{96281D51-D90D-4A66-BBFB-38E84C393C59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "demok.WorkerService", "src\demok.WorkerService\demok.WorkerService.csproj", "{96281D51-D90D-4A66-BBFB-38E84C393C59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demok.Domain", "src\demok.Domain\demok.Domain.csproj", "{5B0B8E6A-F8AE-4688-AD4A-0BBA358C67AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "demok.Domain", "src\demok.Domain\demok.Domain.csproj", "{5B0B8E6A-F8AE-4688-AD4A-0BBA358C67AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demok.InfraStructure.Ioc", "src\demok.InfraStructure.Ioc\demok.InfraStructure.Ioc.csproj", "{87F07333-88FA-4E46-B23F-399CFAE77E23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "demok.InfraStructure.Ioc", "src\demok.InfraStructure.Ioc\demok.InfraStructure.Ioc.csproj", "{87F07333-88FA-4E46-B23F-399CFAE77E23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demok.InfraStructure.Data", "src\demok.InfraStructure.Data\demok.InfraStructure.Data.csproj", "{A0AB4086-1D41-4359-ADD7-0C3310D21676}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "demok.InfraStructure.Data", "src\demok.InfraStructure.Data\demok.InfraStructure.Data.csproj", "{A0AB4086-1D41-4359-ADD7-0C3310D21676}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

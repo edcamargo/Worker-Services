@@ -1,10 +1,12 @@
 ﻿using FluentValidation;
+using FluentValidation.Results;
+using System;
 
 namespace demok.Domain.Entities
 {
     public class Customer : Entity
     {
-        public Customer(string name, decimal salary, string email)
+        public Customer(string name, double salary, string email)
         {
             Name = name;
             Salary = salary;
@@ -12,7 +14,7 @@ namespace demok.Domain.Entities
         }
 
         public string Name { get; private set; }
-        public decimal Salary { get; private set; }
+        public double Salary { get; private set; }
         public string Email { get; private set; }
 
         public void UpdateCustomer(string name, string email)
@@ -21,10 +23,15 @@ namespace demok.Domain.Entities
             Email = email;
         }
 
-        public bool UpdateSalary(decimal salary)
+        public void UpdateSalary(double percentual)
         {
-            Salary = salary;
-            return true;
+            var _newSalary = Salary * percentual;
+            Salary = Math.Round(_newSalary, 2, MidpointRounding.ToEven);
+        }
+        
+        public ValidationResult EhValido()
+        {
+            return new CustomerValidation().Validate(this);
         }
     }
 
@@ -41,7 +48,7 @@ namespace demok.Domain.Entities
                 .WithMessage(NameErroMsg);
 
             RuleFor(c => c.Salary)
-                .NotEmpty()
+                .GreaterThan(0)
             .WithMessage(SalaryErroMsg);
 
             RuleFor(c => c.Email)

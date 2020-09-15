@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\demok.Domain\demok.Domain.csproj" />
+    <ProjectReference Include="..\demok.InfraStructure.Data\demok.InfraStructure.Data.csproj" />
   </ItemGroup>
 
 </Project>

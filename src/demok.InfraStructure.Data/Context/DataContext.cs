@@ -21,7 +21,7 @@ namespace demok.InfraStructure.Data.Context
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
             // Mappings
-            //modelBuilder.ApplyConfiguration(new UserMap());
+            //modelBuilder.ApplyConfiguration(new CustomerMap());
         }
     }
 }

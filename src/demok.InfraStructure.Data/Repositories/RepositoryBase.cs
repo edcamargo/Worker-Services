@@ -8,7 +8,8 @@ namespace demok.Domain.Repositories
     public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
         private readonly DataContext _dataContext;
-        
+        //protected DataContext _dataContext;
+
         public RepositoryBase(DataContext dataContext)
         {
             _dataContext = dataContext;

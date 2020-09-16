@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
-using System;
 
 namespace demok.Domain.Entities
 {
@@ -16,13 +15,6 @@ namespace demok.Domain.Entities
         public string Name { get; private set; }
         public double Salary { get; private set; }
         public string Email { get; private set; }
-        
-        public void UpdateCustomer(string name, string email, double salary)
-        {
-            Name = name;
-            Salary = salary;
-            Email = email;
-        }      
 
         public ValidationResult EhValido()
         {

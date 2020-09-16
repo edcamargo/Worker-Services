@@ -10,8 +10,8 @@ namespace demok.InfraStructure.Ioc
     {
         public static void DependencyInjectionRepository(ref IServiceCollection services)
         {
-            services.AddSingleton<ICustomerRepository, CustomerRepository>();
-            services.AddSingleton<ICustomerService, CustomerService>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+            services.AddTransient<ICustomerService, CustomerService>();
         }
     }
 }

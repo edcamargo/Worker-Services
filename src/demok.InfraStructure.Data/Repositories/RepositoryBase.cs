@@ -15,7 +15,7 @@ namespace demok.Domain.Repositories
 
         public TEntity Add(TEntity obj)
         {
-            _dataContext.Set<TEntity>().Add(obj);
+            _dataContext.Set<TEntity>().AddRange(obj);
             _dataContext.SaveChanges();
 
             return obj;
@@ -23,7 +23,7 @@ namespace demok.Domain.Repositories
 
         public IQueryable<TEntity> GetAll()
         {
-            return _dataContext.Set<TEntity>();
+            return _dataContext.Set<TEntity>().AsNoTracking();
         }
 
         public TEntity GetById(object id)

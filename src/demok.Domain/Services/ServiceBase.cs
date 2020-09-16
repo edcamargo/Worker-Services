@@ -13,27 +13,27 @@ namespace demok.Domain.Services
             _repositoryBase = repositoryBase;
         }
 
-        public TEntity Add(TEntity obj)
+        public virtual TEntity Add(TEntity obj)
         {
             return _repositoryBase.Add(obj);
         }
-
-        public IEnumerable<TEntity> GetAll()
+        
+        public virtual IEnumerable<TEntity> GetAll()
         {
             return _repositoryBase.GetAll();
         }
 
-        public TEntity GetById(object id)
+        public virtual TEntity GetById(object id)
         {
             return _repositoryBase.GetById(id);
         }
 
-        public void Remove(TEntity obj)
+        public virtual void Remove(TEntity obj)
         {
             _repositoryBase.Remove(obj);
         }
 
-        public void Update(TEntity obj)
+        public virtual void Update(TEntity obj)
         {
             _repositoryBase.Update(obj);
         }

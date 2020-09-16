@@ -20,8 +20,9 @@ namespace demok.WorkerService
                 {
                     var connection = hostContext.Configuration.GetConnectionString("DefaultConnection");
                     var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
-                    optionsBuilder.UseSqlServer(connection);
-                   
+                    //optionsBuilder.UseSqlServer(connection);
+
+                    optionsBuilder.UseInMemoryDatabase(connection);
                     services.AddTransient<DataContext>(s => new DataContext(optionsBuilder.Options));
 
                     // Register Dependency Injection 

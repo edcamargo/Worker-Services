@@ -1,24 +1,27 @@
-﻿using FluentValidation.Results;
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
 
 namespace demok.Domain.Entities
 {
     public abstract class Entity : IEquatable<Entity>
     {
-        //[NotMapped]
-        //public ValidationResult ValidationResult { get; set; }
-
         protected Entity()
         {
             Id = Guid.NewGuid();
+            DateIntegration = null;
         }
 
         public Guid Id { get; private set; }
 
+        public DateTime? DateIntegration { get; private set; }
+
         public bool Equals(Entity other)
         {
             return Id == other.Id;
+        }
+
+        public void ConfirmationIntegration()
+        {
+            DateIntegration = DateTime.Now;
         }
 
         public override int GetHashCode()

@@ -1,6 +1,5 @@
 ﻿using demok.InfraStructure.Data.Context;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace demok.Domain.Repositories
@@ -8,7 +7,6 @@ namespace demok.Domain.Repositories
     public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
         private readonly DataContext _dataContext;
-        //protected DataContext _dataContext;
 
         public RepositoryBase(DataContext dataContext)
         {
@@ -23,14 +21,13 @@ namespace demok.Domain.Repositories
             return obj;
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public IQueryable<TEntity> GetAll()
         {
-            return _dataContext.Set<TEntity>().AsNoTracking().ToList();
+            return _dataContext.Set<TEntity>();
         }
 
         public TEntity GetById(object id)
         {
-            _dataContext.Set<TEntity>().AsNoTracking();
             return _dataContext.Set<TEntity>().Find(id);
         }
 

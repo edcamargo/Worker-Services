@@ -16,19 +16,14 @@ namespace demok.Domain.Entities
         public string Name { get; private set; }
         public double Salary { get; private set; }
         public string Email { get; private set; }
-
-        public void UpdateCustomer(string name, string email)
+        
+        public void UpdateCustomer(string name, string email, double salary)
         {
             Name = name;
+            Salary = salary;
             Email = email;
-        }
+        }      
 
-        public void UpdateSalary(double percentual)
-        {
-            var _newSalary = Salary * percentual;
-            Salary = Math.Round(_newSalary, 2, MidpointRounding.ToEven);
-        }
-        
         public ValidationResult EhValido()
         {
             return new CustomerValidation().Validate(this);

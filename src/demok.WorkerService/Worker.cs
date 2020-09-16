@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using demok.Domain.Repositories;
+using demok.Domain.Services.Interfaces;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -11,12 +11,12 @@ namespace demok.WorkerService
     {
         private readonly ILogger<Worker> _logger;
 
-        private readonly ICustomerRepository _customerRepository;
+        private readonly ICustomerService _customerService;
 
-        public Worker(ILogger<Worker> logger, ICustomerRepository customerRepository)
+        public Worker(ILogger<Worker> logger, ICustomerService customerService)
         {
             _logger = logger;
-            _customerRepository = customerRepository;
+            _customerService = customerService;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -25,31 +25,10 @@ namespace demok.WorkerService
 
             while (!stoppingToken.IsCancellationRequested)
             {
-                var _customers = _customerRepository.GetAll();
+                _customerService.ExecuteWork();
 
-                foreach (var item in _customers)
-                {
-                    var _customer = _customerRepository.GetById(item.Id);
-
-                    if (_customer != null)
-                    {
-                        _customer.UpdateCustomer(_customer.Name, _customer.Name+"@gmail.com");
-
-                        _customer.UpdateSalary(2.99);
-
-                        var result = _customer.EhValido();
-                        if (!result.IsValid)
-                            foreach (var error in result.Errors)
-                                _logger.LogInformation("Worker Error include {name} - {message}", _customer.Name, error.ErrorMessage);
-                        else
-                        {
-                            _customerRepository.Update(_customer);
-                            _logger.LogInformation("Worker Sucess updated customer {name}", _customer.Name);
-                        }
-                    }
-
-                    await Task.Delay(3000, stoppingToken);
-                }
+                _logger.LogInformation("Worker service delay at: {time}", DateTimeOffset.Now);
+                await Task.Delay(9000, stoppingToken);
             }
         }
     }

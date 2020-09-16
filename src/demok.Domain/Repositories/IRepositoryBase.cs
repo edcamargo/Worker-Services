@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
 
 namespace demok.Domain.Repositories
 {
@@ -6,7 +6,7 @@ namespace demok.Domain.Repositories
     {
         TEntity Add(TEntity obj);
         TEntity GetById(object id);
-        IEnumerable<TEntity> GetAll();
+        IQueryable<TEntity> GetAll();
         void Update(TEntity obj);
         void Remove(TEntity obj);
     }

@@ -23,5 +23,10 @@ namespace demok.InfraStructure.Data.Context
             // Mappings
             //modelBuilder.ApplyConfiguration(new CustomerMap());
         }
+
+        public override int SaveChanges()
+        {
+            return base.SaveChanges();
+        }
     }
 }
